@@ -1,0 +1,76 @@
+---
+import Card from "./Card/index.astro";
+import { SITE } from "../site-config";
+
+const socialLinkClass =
+  "inline-block w-fit text-darkslate-100 hover:text-primary-400 hover:translate-x-0.5 transition-all duration-150";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4" class="pad-lg">
+  <div class="h-full flex flex-col justify-between">
+    <div>
+      <header class="flex items-center">
+        <h2 class="text-white text-xl font-bold">
+          Let's start working together!
+        </h2>
+      </header>
+      <address class="flex flex-col mt-4 not-italic space-y-2">
+        <h2 class="text-darkslate-300 text-xs uppercase tracking-wider font-semibold">Contact Details</h2>
+        <div>
+          <span class="text-3xs text-darkslate-300 block">Primary Email</span>
+          <a
+            href={`mailto:${SITE.links.email}`}
+            class="text-sm text-darkslate-100 hover:text-primary-400 transition-colors break-words"
+          >
+            {SITE.links.email}
+          </a>
+        </div>
+        {SITE.links.alternativeEmail && (
+          <div>
+            <span class="text-3xs text-darkslate-300 block">Alternative Email</span>
+            <a
+              href={`mailto:${SITE.links.alternativeEmail}`}
+              class="text-sm text-darkslate-100 hover:text-primary-400 transition-colors break-words"
+            >
+              {SITE.links.alternativeEmail}
+            </a>
+          </div>
+        )}
+        <div>
+          <span class="text-3xs text-darkslate-300 block">Location</span>
+          <p class="text-sm text-darkslate-100 m-0">{SITE.location.countryName}</p>
+        </div>
+      </address>
+    </div>
+    <div class="flex flex-col mt-4 w-fit">
+      <h2 class="text-darkslate-300 text-xs uppercase tracking-wider font-semibold mb-1">Find us on</h2>
+      <ul class="flex flex-col gap-0.5">
+        <li>
+          <a href={SITE.links.linkedin} target="_blank" rel="noopener noreferrer" class={socialLinkClass}
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href={SITE.links.github} target="_blank" rel="noopener noreferrer" class={socialLinkClass}
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a href={SITE.links.medium} target="_blank" rel="noopener noreferrer" class={socialLinkClass}
+            >Medium</a
+          >
+        </li>
+        <li>
+          <a href={SITE.links.dribbble} target="_blank" rel="noopener noreferrer" class={socialLinkClass}
+            >Dribbble</a
+          >
+        </li>
+        <li>
+          <a href={SITE.links.behance} target="_blank" rel="noopener noreferrer" class={socialLinkClass}
+            >Behance</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</Card>

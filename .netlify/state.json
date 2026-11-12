@@ -1,0 +1,21 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Ludhiana",
+			"country": {
+				"code": "IN",
+				"name": "India"
+			},
+			"subdivision": {
+				"code": "PB",
+				"name": "Punjab"
+			},
+			"timezone": "Asia/Kolkata",
+			"latitude": 30.9146,
+			"longitude": 75.8543,
+			"postalCode": "141007"
+		},
+		"timestamp": 1793080651205
+	},
+	"dbConnectionString": "postgres://postgres@localhost:61217/postgres"
+}
